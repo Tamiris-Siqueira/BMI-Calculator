@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Calculadora de IMC
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Calcular IMC</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <ion-label color="dark">O IMC (Índice de Massa Corporal) é uma medida utilizada para calcular o peso ideal de cada pessoa.</ion-label>
+    <br><ion-label color="dark">Para calcular o seu índice, preencha os dados abaixo:</ion-label>
+    <ion-item>
+      <ion-label position="stacked">Digite a sua altura:</ion-label>
+      <ion-input placeholder="1.80" [(ngModel)]="altura" name="txtaltura" id="txtaltura"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Digite o seu peso:</ion-label>
+      <ion-input placeholder="80" [(ngModel)]="peso" name="txtpeso" id="txtpeso"></ion-input>
+    </ion-item>
+    <ion-button expand="block" color="success" class="botaocalcular" (click)="calcular()">Calcular</ion-button>
+  </div>
+</ion-content>
